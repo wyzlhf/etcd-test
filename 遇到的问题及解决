@@ -1,0 +1,18 @@
+1、遇到的问题及解决方法：
+undefined: balancer.PickOptions
+
+解决方法：
+将 grpc 版本替换成 v1.26.0
+
+修改依赖为 v1.26.0
+go mod edit -require=google.golang.org/grpc@v1.26.0
+
+获取 v1.26.0 版本的 grpc
+go get -u -x google.golang.org/grpc@v1.26.0
+go get -u google.golang.org/grpc@v1.26.0
+
+经过以上操作，即可解决以上问题
+
+2、所需命令：
+go run etcd_register.go
+go run etcd_discovery.go
